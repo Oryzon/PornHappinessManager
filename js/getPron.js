@@ -31,8 +31,9 @@ $(document).ready(function() {
     });
 
     function send(code) {
+        let email = 'contact@oryzon.me';
         let request = new XMLHttpRequest();
-        request.open('GET', 'https://datas.experience.dorcel.com/api/fr/40/verify/kelkun-du-54@hotmail.fr/' + code, true);
+        request.open('GET', 'https://datas.experience.dorcel.com/api/fr/40/verify/' + email + '/' + code, true);
 
         request.onload = function() {
             let data = (JSON.parse(this.response));
